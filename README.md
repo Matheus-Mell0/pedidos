@@ -7,17 +7,24 @@ API REST para controle de pedidos de produção (cliente, pedido, status e prazo
 ## Tecnologias
 - Java 21
 - Spring Boot
+- Spring Data JPA / Hibernate
+- MySQL
 - Maven
 
 ## Como rodar
+**Pré-requisitos:** JDK 21 e MySQL instalados.
+
 1. Clone o repositório
    `git clone https://github.com/Matheus-Mell0/pedidos.git`
-2. Abra no IntelliJ e rode a classe `PedidosApplication`
-3. Acesse `http://localhost:8080/status`
+2. Crie o banco no MySQL: `CREATE DATABASE pedidos;`
+3. Defina a variável de ambiente `DB_PASSWORD` com a senha do seu MySQL
+4. Rode a classe `PedidosApplication` pelo IntelliJ
+5. Acesse `http://localhost:8080/status`
+
 
 ## Roadmap
 - [x] Estrutura do projeto e endpoint `/status`
-- [ ] Banco de dados MySQL com JPA
+- [x] Banco de dados MySQL com JPA
 - [ ] CRUD de pedidos e clientes
 - [ ] Validações e tratamento de erros
 - [ ] Testes com JUnit e Mockito
