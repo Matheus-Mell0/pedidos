@@ -2,6 +2,7 @@ package com.matheus.pedidos.controller;
 
 import com.matheus.pedidos.model.Pedido;
 import com.matheus.pedidos.repository.PedidoRepository;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,7 @@ public class PedidoController {
     // POST /pedidos - Criar pedido
     @PostMapping
     public ResponseEntity<Pedido> criar(
+            @Valid
             @RequestBody Pedido pedido) {
 
         Pedido pedidoSalvo = pedidoRepository.save(pedido);
@@ -47,6 +49,7 @@ public class PedidoController {
     @PutMapping("/{id}")
     public ResponseEntity<Pedido> atualizar(
             @PathVariable Long id,
+            @Valid
             @RequestBody Pedido dadosPedido) {
 
         return pedidoRepository.findById(id)

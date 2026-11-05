@@ -8,6 +8,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.EnumType;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 
 import java.time.LocalDate;
 
@@ -20,15 +23,21 @@ public class Pedido {
     private Long id;
 
     @Column(nullable = false)
+
+    @NotBlank
     private String cliente;
 
     @Column(nullable = false)
+
+    @NotBlank
     private String descricao;
 
+    @NotNull
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private StatusPedido status;
 
+    @NotNull
     @Column(nullable = false)
     private LocalDate prazoEntrega;
 
