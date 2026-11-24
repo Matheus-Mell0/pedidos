@@ -25,7 +25,7 @@ API REST para controle de pedidos de produção (cliente, pedido, status e prazo
 ## Roadmap
 - [x] Estrutura do projeto e endpoint `/status`
 - [x] Banco de dados MySQL com JPA
-- [ ] CRUD de pedidos e clientes
+- [x] CRUD de pedidos e clientes
 - [ ] Validações e tratamento de erros
 - [ ] Testes com JUnit e Mockito
 - [ ] Autenticação com JWT
